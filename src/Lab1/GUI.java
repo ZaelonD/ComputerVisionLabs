@@ -1,18 +1,18 @@
-import org.opencv.core.Mat;
-import org.opencv.core.MatOfByte;
+package Lab1;
+
+import org.opencv.core.*;
 import org.opencv.imgcodecs.Imgcodecs;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class GUI {
     private final JFrame window;
     private final JLabel screen;
     private final MatOfByte buf;
 
-    public GUI(/*Slider slider*/) {
+    public GUI(String title) {
         // Создаем окно с заголовком
-        window = new JFrame("Выделение контуров");
+        window = new JFrame(title);
         // Создаем подложку под изображение
         screen = new JLabel();
         // Метод для завершения программы по нажатию на крестик

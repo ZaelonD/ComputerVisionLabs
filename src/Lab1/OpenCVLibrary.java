@@ -1,3 +1,5 @@
+package Lab1;
+
 import org.opencv.core.Core;
 
 public class OpenCVLibrary {
