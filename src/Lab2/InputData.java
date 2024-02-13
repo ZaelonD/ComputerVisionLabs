@@ -39,4 +39,12 @@ public class InputData {
         for (File file : Objects.requireNonNull(folder.listFiles()))
             sample.addImage(new Image(file.getPath()));
     }
+
+    public TestSample getTestSample() {
+        return testSample;
+    }
+
+    public TrainingSample getTrainingSample() {
+        return trainingSample;
+    }
 }
