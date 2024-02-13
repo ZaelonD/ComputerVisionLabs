@@ -10,12 +10,13 @@ public class TestSample implements Sample {
         this.testSample = new ArrayList<>();
     }
 
-    public List<Image> getTestSample() {
-        return testSample;
-    }
-
     @Override
     public void addImage(Image image) {
         testSample.add(image);
+    }
+
+    @Override
+    public List<Image> getSample() {
+        return testSample;
     }
 }
