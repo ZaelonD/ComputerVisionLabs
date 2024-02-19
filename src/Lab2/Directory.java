@@ -5,5 +5,5 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Directory {
-    public static final List<String> dirList = new ArrayList<>(Arrays.asList("resources/lab2/training_sample", "resources/lab2/test_sample"));
+    public static final List<String> DIR_LIST = new ArrayList<>(Arrays.asList("resources/lab2/training_sample", "resources/lab2/test_sample"));
 }
