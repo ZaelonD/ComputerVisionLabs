@@ -12,6 +12,15 @@ public class Image {
     private final String imagePath; // Название/путь файла с изображением
     private MatOfKeyPoint matOfKeyPoint; // Матрица ключевых точек изображения
     private Mat descriptors; // Матрица дескрипторов
+    private ImageClass imageClass; // Класс к которому относится изображение
+
+    public Image(String imagePath, ImageClass imageClass) {
+        this.imagePath = imagePath;
+        this.inputImage = Imgcodecs.imread(imagePath);
+        this.grayImage = new Mat();
+        Imgproc.cvtColor(inputImage, grayImage, Imgproc.COLOR_BGR2GRAY);
+        this.imageClass = imageClass;
+    }
 
     public Image(String imagePath) {
         this.imagePath = imagePath;
@@ -46,5 +55,9 @@ public class Image {
 
     public void setDescriptors(Mat descriptors) {
         this.descriptors = descriptors;
+    }
+
+    public ImageClass getImageClass() {
+        return imageClass;
     }
 }
